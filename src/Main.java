@@ -5,11 +5,13 @@ public class Main {
 
         int accumulation = 15_000;
         int total = 0;
+        int Month = 0;
 
-        for (int i = 0; total < 2_459_000; i++) {
-            total = total + total/100;
+        while (total < 2_459_000) {
             total = total + accumulation;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
+            total = total + total/100;
+            Month++;
+            System.out.println("Месяц " + Month + ", сумма накоплений равна " + total + " рублей");
         }
 
         System.out.println("Задача2");
